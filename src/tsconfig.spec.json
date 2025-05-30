@@ -13,7 +13,9 @@
     "polyfills.ts"
   ],
   "include": [
-    "**/*.spec.ts",
-    "**/*.d.ts"
+    "**/*.ts"
+  ],
+  "exclude": [
+    "**/*.e2e-spec.ts"
   ]
 }
