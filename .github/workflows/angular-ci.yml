@@ -42,7 +42,7 @@ jobs:
       run: npm run lint
       
     - name: Test
-      run: npm run test-headless
+      run: npm run test-headless -- --code-coverage
       
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v4  # Updated to v4
