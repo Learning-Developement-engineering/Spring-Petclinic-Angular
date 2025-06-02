@@ -1,4 +1,4 @@
-// Karma configuration file, see link for more information
+// Karma configuration file
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
 module.exports = function (config) {
@@ -17,27 +17,39 @@ module.exports = function (config) {
       require('karma-chrome-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage'),
+      require('karma-sonarqube-unit-reporter'), // ✅ Add SonarQube reporter plugin
       require('@angular-devkit/build-angular/plugins/karma')
     ],
-    client:{
-      clearContext: false // leave Jasmine Spec Runner output visible in browser
+    client: {
+      clearContext: false
     },
-    coverageReporter: { // ✅ new coverage config
+    coverageReporter: {
       dir: require('path').join(__dirname, './coverage'),
       subdir: '.',
       reporters: [
-      { type: 'html' },
-      { type: 'text-summary' }
+        { type: 'html' },
+        { type: 'text-summary' },
+        { type: 'lcov' }, // ✅ Add LCOV for SonarQube
+        { type: 'cobertura' } // ✅ Add Cobertura for GitLab CI
       ],
-      includeAllSources: true // ✅ Forces coverage for all TS files
+      includeAllSources: true
     },
-
-    reporters: ['progress', 'kjhtml','coverage'],
+    
+    // ✅ Add SonarQube reporter configuration
+    sonarQubeUnitReporter: {
+      sonarQubeVersion: 'LATEST',
+      outputFile: 'reports/sonar-report.xml',
+      overrideTestDescription: true,
+      testPaths: ['./src'],
+      testFilePattern: '.spec.ts',
+      useBrowserName: false
+    },
+    
+    reporters: ['progress', 'kjhtml', 'coverage', 'sonarqubeUnit'], // ✅ Add 'sonarqubeUnit'
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
     singleRun: false
   });
 };

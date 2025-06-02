@@ -1,0 +1,103 @@
+<testExecutions version="1">
+  <file path="src/app/pets/pet-edit/pet-edit.component.spec.ts">
+    <testCase name="PetEditComponent should create PetEditComponent" duration="302"/>
+  </file>
+  <file path="src/app/pettypes/pettype.service.spec.ts">
+    <testCase name="PetTypeService should ..." duration="8"/>
+  </file>
+  <file path="src/app/vets/vet-add/vet-add.component.spec.ts">
+    <testCase name="VetAddComponent gotoVetList should navigate to /vets" duration="32"/>
+  </file>
+  <file path="src/app/owners/owner-list/owner-list.component.spec.ts">
+    <testCase name="OwnerListComponent should call ngOnInit() method" duration="51"/>
+    <testCase name="OwnerListComponent should create OwnerListComponent" duration="9"/>
+    <testCase name="OwnerListComponent  should show full name after getOwners observable (async) " duration="31"/>
+  </file>
+  <file path="src/app/pettypes/pettype-add/pettype-add.component.spec.ts">
+    <testCase name="PettypeAddComponent should create PettypeAddComponent" duration="38"/>
+  </file>
+  <file path="src/app/specialties/specialty-list/specialty-list.component.spec.ts">
+    <testCase name="SpecialtyListComponent should call deleteSpecialty() method" duration="23"/>
+    <testCase name="SpecialtyListComponent should create SpecialtyListComponent" duration="26"/>
+  </file>
+  <file path="src/app/specialties/specialty.service.spec.ts">
+    <testCase name="SpecialtyService should ..." duration="3"/>
+  </file>
+  <file path="src/app/pets/pet-list/pet-list.component.spec.ts">
+    <testCase name="PetListComponent should create PetListComponent" duration="18"/>
+    <testCase name="PetListComponent should call deletePet() method" duration="10"/>
+  </file>
+  <file path="src/app/owners/owner.service.spec.ts">
+    <testCase name="OwnerService add owner" duration="7"/>
+    <testCase name="OwnerService should return expected owners (called once)" duration="2"/>
+    <testCase name="OwnerService updateOwner" duration="2"/>
+    <testCase name="OwnerService search the owner by id" duration="3"/>
+    <testCase name="OwnerService delete Owner" duration="3"/>
+    <testCase name="OwnerService search for delete Owner" duration="4"/>
+  </file>
+  <file path="src/app/specialties/specialty-add/specialty-add.component.spec.ts">
+    <testCase name="SpecialtyAddComponent should create SpecialtyAddComponent" duration="19"/>
+  </file>
+  <file path="src/app/owners/owner-edit/owner-edit.component.spec.ts">
+    <testCase name="OwnerEditComponent update owner" duration="33"/>
+    <testCase name="OwnerEditComponent back button routing" duration="26"/>
+    <testCase name="OwnerEditComponent should create OwnerEditComponent" duration="27"/>
+  </file>
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should create the app" duration="18"/>
+  </file>
+  <file path="src/app/pettypes/pettype-list/pettype-list.component.spec.ts">
+    <testCase name="PettypeListComponent should call deletePetType() method" duration="17"/>
+    <testCase name="PettypeListComponent should create PettypeListComponent" duration="10"/>
+  </file>
+  <file path="src/app/visits/visit-list/visit-list.component.spec.ts">
+    <testCase name="VisitListComponent should call deleteVisit() method" duration="4"/>
+    <testCase name="VisitListComponent should create VisitListComponent" duration="3"/>
+  </file>
+  <file path="src/app/pets/pet.service.spec.ts">
+    <testCase name="PetService should ..." duration="2"/>
+  </file>
+  <file path="src/app/parts/welcome/welcome.component.spec.ts">
+    <testCase name="WelcomeComponent should create WelcomeComponent" duration="3"/>
+  </file>
+  <file path="src/app/pets/pet-add/pet-add.component.spec.ts">
+    <testCase name="PetAddComponent should create PetAddComponent" duration="19"/>
+  </file>
+  <file path="src/app/vets/vet-list/vet-list.component.spec.ts">
+    <testCase name="VetListComponent should create" duration="12"/>
+  </file>
+  <file path="src/app/vets/vet-edit/vet-edit.component.spec.ts">
+    <testCase name="VetEditComponent gotoVetList should navigate to /vets" duration="93"/>
+  </file>
+  <file path="src/app/parts/page-not-found/page-not-found.component.spec.ts">
+    <testCase name="PageNotFoundComponent should create PageNotFoundComponent" duration="11"/>
+  </file>
+  <file path="src/app/specialties/specialty-edit/specialty-edit.component.spec.ts">
+    <testCase name="SpecialtyEditComponent should create SpecialtyEditComponent" duration="12"/>
+  </file>
+  <file path="src/app/pettypes/pettype-edit/pettype-edit.component.spec.ts">
+    <testCase name="PettypeEditComponent should create PettypeEditComponent" duration="12"/>
+  </file>
+  <file path="src/app/visits/visit-edit/visit-edit.component.spec.ts">
+    <testCase name="VisitEditComponent should create VisitEditComponent" duration="17"/>
+  </file>
+  <file path="src/app/owners/owner-add/owner-add.component.spec.ts">
+    <testCase name="OwnerAddComponent add owner" duration="17"/>
+    <testCase name="OwnerAddComponent back button routing" duration="9"/>
+    <testCase name="OwnerAddComponent should create OwnerAddComponent" duration="7"/>
+  </file>
+  <file path="src/app/visits/visit-add/visit-add.component.spec.ts">
+    <testCase name="VisitAddComponent should create VisitAddComponent" duration="14"/>
+  </file>
+  <file path="src/app/owners/owner-detail/owner-detail.component.spec.ts">
+    <testCase name="OwnerDetailComponent routing to owners page on click of editOwner,addPet,gotoOwnersList" duration="11"/>
+    <testCase name="OwnerDetailComponent find owner using ownerId" duration="12"/>
+    <testCase name="OwnerDetailComponent should create OwnerDetailComponent" duration="5"/>
+  </file>
+  <file path="src/app/vets/vet.service.spec.ts">
+    <testCase name="VetService should ..." duration="2"/>
+  </file>
+  <file path="src/app/visits/visit.service.spec.ts">
+    <testCase name="VisitService should ..." duration="2"/>
+  </file>
+</testExecutions>

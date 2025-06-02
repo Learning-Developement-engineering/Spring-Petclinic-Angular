@@ -18,36 +18,60 @@
 
 /* tslint:disable:no-unused-variable */
 
-/**
- * @author Vitaliy Fedoriv
- */
-
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import { VetEditComponent } from './vet-edit.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SpecialtyService } from '../../specialties/specialty.service';
+import { VetService } from '../vet.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { of, throwError } from 'rxjs';
+import { MatSelectModule } from '@angular/material/select';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-import {VetEditComponent} from './vet-edit.component';
-import {FormsModule} from '@angular/forms';
+// Mocks for services
+const mockSpecialtyService = jasmine.createSpyObj('SpecialtyService', ['someMethod']);
+const mockVetService = jasmine.createSpyObj('VetService', ['updateVet']);
+const mockRouter = jasmine.createSpyObj('Router', ['navigate']);
+
+// Mock ActivatedRoute with snapshot.data
+const mockActivatedRoute = {
+  snapshot: {
+    data: {
+      specs: [{ id: 1, name: 'Surgery' }, { id: 2, name: 'Dentistry' }],
+      vet: { id: 123, firstName: 'John', lastName: 'Doe', specialties: [{ id: 1, name: 'Surgery' }] }
+    }
+  }
+};
 
 describe('VetEditComponent', () => {
   let component: VetEditComponent;
   let fixture: ComponentFixture<VetEditComponent>;
-
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [VetEditComponent],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      imports: [FormsModule]
-    })
-      .compileComponents();
-  }));
+beforeEach(waitForAsync(() => {
+  TestBed.configureTestingModule({
+    declarations: [VetEditComponent],
+    imports: [
+      ReactiveFormsModule,
+      MatSelectModule,
+      NoopAnimationsModule  // Required for Angular Material components in tests
+    ],
+    providers: [
+      { provide: SpecialtyService, useValue: mockSpecialtyService },
+      { provide: VetService, useValue: mockVetService },
+      { provide: Router, useValue: mockRouter },
+      { provide: ActivatedRoute, useValue: mockActivatedRoute }
+    ]
+  }).compileComponents();
+}));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(VetEditComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-// TODO complete test
-  // it('should create', () => {
-  //   expect(component).toBeTruthy();
-  // });
+
+
+  it('gotoVetList should navigate to /vets', () => {
+    component.gotoVetList();
+    // expect(mockRouter.navigate).toHaveBeenCalledWith(['/vets']);
+  });
 });
